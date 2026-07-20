@@ -145,7 +145,7 @@
     background: var(--navy);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: end;
+    align-items: center;
     position: relative;
     overflow: hidden;
     padding: 0;
@@ -198,41 +198,23 @@
   .hero-image-col {
     position: relative;
     z-index: 1;
-    height: 100vh;
+    height: 100%;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
   }
   .hero-img-wrap {
     width: 100%;
-    height: 88vh;
-    overflow: hidden;
-    position: relative;
+    height: 100%;
+    max-height: 90vh;
+    display: flex;
+    align-items: flex-end;
   }
   .hero-img-wrap img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    filter: brightness(0.85) saturate(0.9);
-  }
-  .hero-img-placeholder {
-    width: 100%; height: 100%;
-    background: var(--navy-mid);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    gap: 0.75rem;
-    border-left: 1px solid rgba(255,255,255,0.06);
-  }
-  .placeholder-icon {
-    width: 48px; height: 48px;
-    border: 1px solid var(--slate);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .placeholder-label {
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--slate);
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
   }
 
   /* ── DORES ── */
@@ -452,7 +434,7 @@
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
-  .case-img img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+  .case-img img { width: 100%; height: 100%; object-fit: cover; }
 
   .case-nome {
     font-family: var(--serif);
@@ -761,8 +743,8 @@
   @media (max-width: 860px) {
     section { padding: 5rem 0; }
     #hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-content { padding: 6rem 1.5rem 3rem; max-width: 100%; margin: 0; }
-    .hero-image-col { height: 60vw; }
+    .hero-content { padding: 6rem 1.5rem 2.5rem; max-width: 100%; margin: 0; }
+    .hero-image-col { height: auto; max-height: 550px; }
     .hero-img-wrap { height: 100%; }
     .dores-grid, .sobre-grid, .entregaveis-header, .qual-grid,
     .cases-header, .inv-grid, .processo-header, .bio-grid, .faq-grid {
@@ -812,9 +794,7 @@
   </div>
   <div class="hero-image-col">
     <div class="hero-img-wrap">
-     <img src="hero.png" alt="Ariane Scheffer">
-        <span class="placeholder-label">Foto Ariane Scheffer</span>
-      </div>
+      <img src="hero.png" alt="Ariane Scheffer">
     </div>
   </div>
 </section>
@@ -993,8 +973,7 @@
     <div class="case-card reveal">
       <div class="case-meta">
         <div class="case-img">
-          <!-- <img src="lia.jpg" alt="Lia"> -->
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="#3D5166" stroke-width="1.2"/><path d="M4 24c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#3D5166" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <img src="case-lia.png" alt="Lia">
         </div>
         <p class="case-nome">Lia</p>
         <p class="case-nicho">Cerâmica em alta temperatura · São Paulo</p>
@@ -1008,8 +987,7 @@
     <div class="case-card reveal delay-1">
       <div class="case-meta">
         <div class="case-img">
-          <!-- <img src="helena.jpg" alt="Helena Leopardi"> -->
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="#3D5166" stroke-width="1.2"/><path d="M4 24c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#3D5166" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <img src="case-helena.png" alt="Helena Leopardi">
         </div>
         <p class="case-nome">Helena Leopardi</p>
         <p class="case-nicho">Azulejaria contemporânea assinada</p>
@@ -1023,8 +1001,7 @@
     <div class="case-card reveal delay-2">
       <div class="case-meta">
         <div class="case-img">
-          <!-- <img src="vitoria.jpg" alt="Vitória Jardim"> -->
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="#3D5166" stroke-width="1.2"/><path d="M4 24c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#3D5166" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <img src="case-vitoria.png" alt="Vitória Jardim">
         </div>
         <p class="case-nome">Vitória Jardim</p>
         <p class="case-nicho">ViAstrológica · Astrologia</p>
@@ -1039,8 +1016,7 @@
     <div class="case-card reveal delay-1">
       <div class="case-meta">
         <div class="case-img">
-          <!-- <img src="giulia.jpg" alt="Giulia D'Andrea"> -->
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="10" r="5" stroke="#3D5166" stroke-width="1.2"/><path d="M4 24c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="#3D5166" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <img src="case-giulia.png" alt="Giulia D'Andrea">
         </div>
         <p class="case-nome">Giulia D'Andrea</p>
         <p class="case-nicho">Artista visual e plástica · São Paulo</p>
@@ -1141,16 +1117,7 @@
     <div class="bio-grid">
       <div class="bio-img-area reveal">
         <div class="bio-foto">
-          <!-- SUBSTITUA: <img src="ariane.jpg" alt="Ariane Scheffer"> -->
-          <div style="display:flex;flex-direction:column;align-items:center;gap:0.75rem;">
-            <div class="placeholder-icon">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                <circle cx="11" cy="7.5" r="4" stroke="#3D5166" stroke-width="1.1"/>
-                <path d="M3 20c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="#3D5166" stroke-width="1.1" stroke-linecap="round"/>
-              </svg>
-            </div>
-            <span class="placeholder-label">Foto Ariane Scheffer</span>
-          </div>
+          <img src="bio-ariane.png" alt="Ariane Scheffer">
         </div>
         <h3 class="bio-nome">Ariane Scheffer</h3>
         <p class="bio-cargo">Consultora de crescimento para marcas criativas</p>
@@ -1237,9 +1204,6 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
