@@ -20,7 +20,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230D1B2A'/><text x='50%' y='54%' font-family='Georgia,serif' font-size='16' fill='%23C9A84C' text-anchor='middle' dominant-baseline='middle' font-style='italic'>e</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Lato:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -36,8 +36,9 @@
     --gold-light:#E2C97E;
     --magenta:   #8B2252;
     --magenta-l: #B03070;
-    --serif: 'Playfair Display', Georgia, serif;
-    --sans:  'Lato', system-ui, sans-serif;
+    --serif: 'Instrument Sans', system-ui, sans-serif;
+    --sans:  'Instrument Sans', system-ui, sans-serif;
+    --accent-serif: 'Fraunces', Georgia, serif;
     --max: 1100px;
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -55,9 +56,9 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: 1.15; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.15; }
   strong { font-weight: 700; }
-  em { font-style: italic; }
+  em { font-style: italic; font-weight: 500; }
   p { color: var(--slate); }
 
   .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
@@ -76,12 +77,12 @@
   .display {
     font-family: var(--serif);
     font-size: clamp(2.2rem, 4.5vw, 3.6rem);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.02em;
     color: var(--navy);
   }
-  .display em { color: var(--gold); font-style: italic; }
+  .display em { color: var(--gold); font-family: var(--accent-serif); font-style: italic; font-weight: 500; }
   .display.light { color: var(--white); }
   .display.light em { color: var(--gold-light); }
 
@@ -180,16 +181,16 @@
   .hero-headline {
     font-family: var(--serif);
     font-size: clamp(2.6rem, 4.5vw, 3.8rem);
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.08;
     letter-spacing: -0.02em;
     color: var(--white);
     margin-bottom: 1.8rem;
   }
-  .hero-headline em { color: var(--gold); font-style: italic; }
+  .hero-headline em { color: var(--gold); font-family: var(--accent-serif); font-style: italic; font-weight: 500; }
   .hero-sub {
     font-size: 1.05rem;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--mist);
     max-width: 440px;
     margin-bottom: 3rem;
@@ -269,12 +270,13 @@
   }
   .dor-fechamento p {
     font-family: var(--serif);
-    font-style: italic;
+    font-style: normal;
+    font-weight: 500;
     font-size: 1.1rem;
     color: var(--mist);
     line-height: 1.55;
   }
-  .dor-fechamento em { color: var(--gold-light); }
+  .dor-fechamento em { color: var(--gold-light); font-family: var(--accent-serif); font-style: italic; font-weight: 500; }
 
   /* ── SOBRE ── */
   #sobre { background: var(--navy-mid); padding: 8rem 0; }
@@ -287,7 +289,8 @@
   }
   .sobre-quote {
     font-family: var(--serif);
-    font-style: italic;
+    font-style: normal;
+    font-weight: 500;
     font-size: clamp(1.3rem, 2vw, 1.7rem);
     color: var(--white);
     line-height: 1.45;
@@ -319,7 +322,8 @@
   }
   .callout p {
     font-family: var(--serif);
-    font-style: italic;
+    font-style: normal;
+    font-weight: 500;
     font-size: 1rem;
     color: var(--navy);
     line-height: 1.6;
@@ -336,7 +340,8 @@
   .entregavel-item:last-of-type { border-bottom: 2px solid var(--navy); }
   .entregavel-num {
     font-family: var(--serif);
-    font-style: italic;
+    font-style: normal;
+    font-weight: 500;
     font-size: 0.95rem;
     color: var(--mist);
     padding-top: 0.2rem;
@@ -344,7 +349,7 @@
   .entregavel-titulo {
     font-family: var(--sans);
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--navy);
     margin-bottom: 0.4rem;
   }
@@ -468,7 +473,8 @@
   }
   .case-depoimento {
     font-family: var(--serif);
-    font-style: italic;
+    font-style: normal;
+    font-weight: 500;
     font-size: 1.02rem;
     color: var(--fog);
     border-left: 2px solid var(--magenta-l);
@@ -487,7 +493,8 @@
   }
   .inv-ancora {
     font-family: var(--serif);
-    font-style: italic;
+    font-style: normal;
+    font-weight: 500;
     font-size: 1.3rem;
     color: var(--navy-soft);
     line-height: 1.55;
@@ -515,6 +522,16 @@
     color: var(--navy);
     line-height: 1;
     margin: 1rem 0 0.3rem;
+  }
+  .inv-prefix {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--mist);
+    line-height: 1.2;
+    margin-bottom: 0.55rem;
+    letter-spacing: 0.02em;
   }
   .inv-separador {
     font-size: 0.8rem;
@@ -590,7 +607,7 @@
   .passo:hover .passo-num { color: var(--gold); }
   .passo-titulo {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--navy);
     margin-bottom: 0.3rem;
   }
@@ -643,7 +660,8 @@
   }
   .bio-crenca {
     font-family: var(--serif);
-    font-style: italic;
+    font-style: normal;
+    font-weight: 500;
     font-size: 1.25rem;
     color: var(--white);
     border-left: 2px solid var(--gold);
@@ -717,12 +735,12 @@
   .cta-headline {
     font-family: var(--serif);
     font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 400;
+    font-weight: 500;
     color: var(--white);
     line-height: 1.2;
     margin-bottom: 1.2rem;
   }
-  .cta-headline em { color: var(--gold-light); font-style: italic; }
+  .cta-headline em { color: var(--gold-light); font-family: var(--accent-serif); font-style: italic; font-weight: 500; }
   .cta-sub {
     font-size: 1rem;
     font-weight: 300;
@@ -944,7 +962,7 @@
         <p class="qual-col-title"><span class="dot dot-yes"></span>A ECOS pode fazer sentido para você</p>
         <div class="qual-item">Você já tem um trabalho, serviço, produto ou oferta minimamente definidos e algum histórico de atuação ou vendas.</div>
         <div class="qual-item">Você percebe um problema na forma como o trabalho está estruturado, comunicado, vendido ou organizado, mas ainda não sabe exatamente o que precisa mudar.</div>
-        <div class="qual-item">Você está diante de um próximo movimento e quer entender se a estrutura atual consegue sustentá lo.</div>
+        <div class="qual-item">Você está diante de um próximo movimento e quer entender se a estrutura atual consegue sustentá-lo.</div>
         <div class="qual-item">Você precisa escolher prioridades em vez de continuar tentando corrigir tudo ao mesmo tempo.</div>
       </div>
       <div class="qual-col-no reveal delay-2">
@@ -968,7 +986,7 @@
         <span class="label" style="color:rgba(201,168,76,0.7); margin-bottom:1rem;">Quando a leitura muda, as decisões também mudam</span>
         <h2 class="display light" style="margin-top:1rem;">Quatro <em>histórias reais.</em></h2>
       </div>
-      <p>Quatro situações em que organizar o problema mudou o próximo movimento.</p>
+      <p>Quatro negócios criativos, quatro problemas diferentes e decisões que mudaram o rumo do trabalho.</p>
     </div>
 
     <div class="case-card reveal">
@@ -978,10 +996,10 @@
         </div>
         <p class="case-nome">Lia</p>
         <p class="case-nicho">Cerâmica em alta temperatura · São Paulo</p>
-        <span class="case-stat">+ de 3 mil seguidores em 60 dias</span>
+        <span class="case-stat">Mais de 200 pessoas na lista de espera antes da abertura</span>
       </div>
       <div>
-        <p class="case-texto">Quando chegou na ECOS, o Instagram tinha 250 seguidores e nenhuma venda vinha de lá. Era preciso fazer o acervo chegar para um público genuinamente interessado em São Paulo. Em 60 dias chegamos a 3 mil seguidores e criamos uma lista de espera com mais de 200 pessoas interessadas no catálogo; sem campanha de captação direta ativa. As vendas aconteceram já no dia da abertura do ateliê.</p>
+        <p class="case-texto">O ateliê começava com uma audiência pequena e precisava fazer o acervo chegar a um público genuinamente interessado em São Paulo. Em 60 dias, o Instagram passou de 250 para mais de 3 mil seguidores e foi criada uma lista de espera com mais de 200 pessoas interessadas no catálogo, sem campanha de captação direta ativa. As vendas começaram já no dia da abertura do ateliê.</p>
       </div>
     </div>
 
@@ -992,10 +1010,10 @@
         </div>
         <p class="case-nome">Helena Leopardi</p>
         <p class="case-nicho">Azulejaria contemporânea assinada</p>
-        <span class="case-stat">7× sobre o investido em anúncios</span>
+        <span class="case-stat">De fornecedora de azulejaria artesanal para marca autoral de painéis em azulejaria artística</span>
       </div>
       <div>
-        <p class="case-texto">Atelier estruturado, artista experiente, design contemporâneo; mas posicionada como fornecedora de revestimentos para arquitetura. Fizemos o reposicionamento: de fornecedora de revestimento para criadora de painéis assinados e personalizados. Resultado: mudança expressiva no valor dos fechamentos e 7× de retorno sobre o investido em mídia paga.</p>
+        <p class="case-texto">O Atelier Leopardi já tinha repertório, linguagem autoral e experiência consolidada, mas sua comunicação comercial ainda apresentava o trabalho principalmente como fornecimento de azulejaria artesanal para projetos de arquitetura. O reposicionamento organizou essa percepção em torno da autoria de Helena e dos painéis em azulejaria artística, assinados e personalizados. A mudança também se refletiu no valor dos fechamentos e no desempenho da mídia paga.</p>
       </div>
     </div>
 
@@ -1006,10 +1024,10 @@
         </div>
         <p class="case-nome">Vitória Jardim</p>
         <p class="case-nicho">ViAstrológica · Astrologia</p>
-        <span class="case-stat">Meta de faturamento batida</span>
+        <span class="case-stat">Fluxo de captação, agenda e estrutura comercial reorganizados</span>
       </div>
       <div>
-        <p class="case-texto">Agenda lotada, mas a oferta de serviços estava mal distribuída. Ela atendia muito, faturava menos do que deveria e não sobrava margem fora do atendimento. Reorganizamos a estrutura de ofertas, o fluxo de captação e os pontos de contato com o cliente.</p>
+        <p class="case-texto">Vitória já tinha demanda e uma agenda cheia, mas a estrutura dos serviços concentrava tempo demais no atendimento e limitava a organização comercial do trabalho. Reorganizamos a distribuição das ofertas, o fluxo de captação, os pontos de contato com o cliente e a lógica da agenda para melhorar a relação entre tempo disponível, entrega e faturamento.</p>
         <blockquote class="case-depoimento">"Todo trabalho que você me orientou alinhou tanto minha entrega quanto minha realização em desempenhar essa entrega. Meta de faturamento batida!"</blockquote>
       </div>
     </div>
@@ -1047,7 +1065,7 @@
       <div class="reveal delay-2">
         <div class="inv-box">
           <span class="label">Consultoria ECOS</span>
-          <p class="inv-valor">a partir de R$&nbsp;2.800</p>
+          <p class="inv-valor"><span class="inv-prefix">a partir de</span>R$&nbsp;2.800</p>
           <p class="inv-separador">PIX ou</p>
           <p class="inv-vista">em até 12× (com taxas)</p>
           <ul class="inv-list">
@@ -1097,7 +1115,7 @@
       </div>
       <div class="passo reveal">
         <span class="passo-num">04</span>
-        <div><p class="passo-titulo">Você responde o formulário de pré sessão</p><p class="passo-desc">Depois da contratação, você recebe um formulário mais aprofundado para reunir informações que vão preparar a investigação.</p></div>
+        <div><p class="passo-titulo">Você responde o formulário de pré-sessão</p><p class="passo-desc">Depois da contratação, você recebe um formulário mais aprofundado para reunir informações que vão preparar a investigação.</p></div>
       </div>
       <div class="passo reveal delay-1">
         <span class="passo-num">05</span>
@@ -1186,14 +1204,11 @@
         o seu <em>negócio criativo.</em>
       </h2>
       <p class="cta-sub">
-        Preencha o formulário e me apresente seu trabalho, o que está acontecendo agora e o que levou você a procurar ajuda. Vou ler suas respostas e entrar em contato para dar um retorno, seja para seguirmos com a ECOS ou para indicar que ela não é a melhor resposta para este momento.
+        Preencha o formulário e me apresente seu trabalho, o que está acontecendo agora e o que levou você a procurar ajuda. Vou ler suas respostas e entrar em contato para dar um retorno em até 48h úteis.
       </p>
       <a href="https://tally.so/r/RGAgJj" target="_blank" class="btn btn-primary btn-large">
-        Falar com Ariane
+        Apresentar meu momento
       </a>
-      <p class="cta-micro">
-        O formulário não é um compromisso de contratação. Ele é o primeiro passo para eu entender seu momento e responder com mais contexto.
-      </p>
     </div>
   </div>
 </section>
